@@ -1,0 +1,531 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f7fa;
+}
+
+.order-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.page-title {
+  text-align: center;
+  color: #091d31;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: bolder;
+}
+
+/* Two Column Layout */
+.order-layout {
+  display: flex;
+  gap: 2rem;
+}
+
+.product-column {
+  flex: 1;
+  min-width: 0;
+}
+
+.form-column {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Product Card Styles */
+.product-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.product-image {
+  height: 300px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover img {
+  transform: scale(1.05);
+}
+
+.product-details {
+  padding: 1.5rem;
+}
+
+.product-details h2 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.product-description {
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.product-features {
+  margin: 1.5rem 0;
+}
+
+.product-features h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.product-features ul {
+  list-style: none;
+  padding-left: 1.2rem;
+}
+
+.product-features li {
+  position: relative;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+
+.product-features li:before {
+  content: "•";
+  color: #3498db;
+  position: absolute;
+  left: -1rem;
+}
+
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ecf0f1;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e74c3c;
+}
+
+.shipping {
+  background: #2ecc71;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Benefits Section */
+.benefits-section {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.benefits-section h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.benefit-icon {
+  background: #3498db;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.benefit-text {
+  color: #34495e;
+  font-size: 0.9rem;
+}
+
+/* Form Styles */
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.form-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.full-width {
+  flex: 0 0 100%;
+}
+
+.input-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #34495e;
+  font-size: 0.9rem;
+}
+
+.input-group input {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.error-input {
+  border-color: #e74c3c !important;
+}
+
+.error-input:focus {
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2) !important;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+/* Terms Section */
+.terms-section {
+  margin: 1rem 0;
+}
+
+.terms-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: #34495e;
+  font-size: 0.9rem;
+}
+
+.terms-checkbox input {
+  width: 18px;
+  height: 18px;
+}
+
+.terms-checkbox a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.terms-checkbox a:hover {
+  text-decoration: underline;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: linear-gradient(to right, #3498db, #2c3e50);
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to right, #2980b9, #1a252f);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success Message */
+.success-message-box {
+  background: #2ecc71;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  animation: fadeIn 0.5s;
+}
+
+.success-message-box h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.success-message-box p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.success-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .order-layout {
+    flex-direction: column;
+  }
+  
+  .product-column, .form-column {
+    width: 100%;
+  }
+  
+  .form-group {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .input-group {
+    min-width: 100%;
+  }
+}
+/* Container holding dog info and form */
+.product-column {
+  flex: 1;
+  padding: 20px;
+  background: #fefefe;
+}
+
+/* Product Card */
+.product-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+/* Image */
+.product-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Product Description */
+.product-details h2 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.product-description {
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Features */
+.product-features h3 {
+  margin-bottom: 8px;
+}
+
+.product-features ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.product-features li {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Price Section */
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 20px;
+  color: #2a2a2a;
+}
+
+.shipping {
+  color: green;
+}
+.shipping:hover {
+  background-color: #ff6b6b;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color:white;
+  transition: background-color 0.3s ease;
+}
+
+/* ✅ Shipping Info Styling */
+.shipping-info {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #eaf7ff;
+  border-left: 5px solid #007acc;
+  border-radius: 8px;
+}
+
+.shipping-info h3 {
+  margin-bottom: 8px;
+  color: #005b99;
+}
+
+.shipping-info p {
+  margin: 5px 0;
+  color: #333;
+}
+
+/* Transport means*/
+.shippingMeans{
+      margin-top: 20px;
+  padding: 15px;
+  background-color: #eaf7ff;
+  border-left: 5px solid #007acc;
+  border-radius: 8px;
+}
+.shippingMeans h3 {
+  margin-bottom: 8px;
+  color: #005b99;
+}
+.shippingMeans p {
+  margin: 5px 0;
+  color: #333;
+}
+
+
+.shippingMeans ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.shippingMeans li {
+  margin-bottom: 5px;
+  color: #0a52d8;
+}
+
+
+/* Benefits Section */
+.benefits-section {
+  margin-top: 20px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+}
+
+.benefit-icon {
+  font-size: 20px;
+  color: green;
+  margin-right: 8px;
+}
+
+.benefit-text {
+  font-size: 16px;
+  color: #333;
+}

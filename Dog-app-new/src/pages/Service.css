@@ -1,0 +1,94 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.service-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* 🐾 Full-Width Hero Section */
+.hero-section {
+  width: 100vw; /* Full viewport width */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  width: 100%;
+}
+
+.hero-headline {
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subheadline {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #e05757;
+}
+
+.secondary-btn {
+  background-color: white;
+  color: #333;
+}
+
+.secondary-btn:hover {
+  background-color: #f1f1f1;
+}

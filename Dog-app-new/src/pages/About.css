@@ -1,0 +1,193 @@
+.about-wrapper {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 100vw;
+  margin: auto;
+  cursor: pointer;
+}
+
+.intro-card {
+  display: flex;
+  align-items: stretch;
+  background: linear-gradient(135deg, #ccd9ff, #001a33); /* deeper gradient */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+}
+
+.intro-text {
+  flex: 1;
+  padding: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.intro-text p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.intro-image-wrapper {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sub-heading {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+
+.info-card {
+  flex: 1 1 230px;
+  background-color: #eaf4fd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.info-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 3rem auto;
+  max-width: 1200px;
+  padding: 0 1.5rem;
+}
+
+.mission-card,
+.vision-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  animation: slideInUp 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Apply delays for staggered animation */
+.mission-card {
+  animation-delay: 0.2s;
+}
+.vision-card {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideInUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.mission-card h3,
+.vision-card h3 {
+  font-size: 1.6rem;
+  color: #2a3d66;
+  margin-bottom: 1rem;
+}
+
+.mission-card p,
+.vision-card p {
+  font-size: 1rem;
+  color: #444c63;
+  line-height: 1.6;
+}
+.cta-banner {
+  display: flex;
+  background: linear-gradient(to left, #021e3a, #03478c9f);
+  border-radius: 8px;
+  overflow: hidden;
+  color: white;
+}
+
+.cta-content {
+  width: 60%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cta-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.cta-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  align-self: flex-start;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #ff5252;
+}
+
+.cta-image-wrapper {
+  width: 100%;
+  height: 175%;
+}
+
+.cta-image-wrapper img {
+  width: 105%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
