@@ -36,7 +36,8 @@ const Signup = () => {
   return (
     <div className="auth-container">
       <div className="auth-form">
-        <h2>Sign Up</h2>
+        <h6>TRINITY DOGS</h6>
+        <h2>Sign Up To Get Started</h2>
         {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleSignup}>
           <div className="form-group">

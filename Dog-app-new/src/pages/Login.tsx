@@ -29,7 +29,8 @@ const Login = () => {
   return (
     <div className="auth-container">
       <div className="auth-form">
-        <h2>Login</h2>
+        <h6>TRINITY DOGS </h6>
+        <h2>Login To Get Access</h2>
         {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleLogin}>
           <div className="form-group">
@@ -57,7 +58,7 @@ const Login = () => {
           </button>
         </form>
         <p className="auth-link">
-          Don't have an account? <a href="/signup">Sign up</a>
+          Don't have an account? <a href="/signup">Register</a>
         </p>
       </div>
     </div>
