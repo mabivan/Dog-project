@@ -1,5 +1,7 @@
 import React from 'react';
 import './About.css';
+import { Link } from 'react-router-dom';
+import popularImages from '../assets/images/CT image.jpeg';
 
 const About: React.FC = () => {
   return (
@@ -61,11 +63,13 @@ const About: React.FC = () => {
         <div className="cta-content">
           <h3>Have Questions?</h3>
           <p>We're here to help! Reach out to us anytime or start browsing available Dogs.</p>
+          <Link to="/contact">
           <button className="cta-button">Get Started</button>
+          </Link>
         </div>
 
         <div className="cta-image-wrapper">
-          <img src="/military-dog.png" alt="Contact Dog" />
+          <img src={popularImages } alt="Contact Dog" />
         </div>
       </section>
 

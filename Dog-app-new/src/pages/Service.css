@@ -1,94 +1,465 @@
-/* General reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.service-page {
+/* Global Layout */
+.services-page {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
+  color: #333;
+  background-color: #f9f9f9;
 }
 
-
-/* 🐾 Full-Width Hero Section */
+/* Hero Section */
 .hero-section {
-  width: 100vw; /* Full viewport width */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 90vh;
+  background: url('../assets/images/care.jpeg') center/cover no-repeat;
+  height: 100vh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  color: white;
-  position: relative;
-  overflow: hidden;
 }
 
-.hero-section::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.306);
+  width: 60%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.45);
-  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 700px;
-  width: 100%;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  max-width: 800px;
 }
 
-.hero-headline {
-  font-size: 2.7rem;
+.hero-content h1 {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.hero-subheadline {
-  font-size: 1.5rem;
+.hero-content p {
+  font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
-.hero-buttons {
+.Service-hero-buttons button {
+  padding: 12px 24px;
+  margin: 0 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.Service-primary-btn {
+  background-color:#ff6b6b;
+  color: #fff; 
+}
+
+.Service-secondary-btn {
+  background-color: #062545;
+  color: #fff;
+  border: 2px solid #062545;
+}
+
+.Service-primary-btn:hover,
+.Service-secondary-btn:hover {
+  opacity: 0.85;
+}
+.servicePage-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+.servicePage-card{
+  overflow: hidden;
+
+  
+}
+
+/* Value Proposition */
+.value-proposition {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.value-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background-color: #f0f0f0;
+  padding: 30px;
+  width: 300px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* Core Services Section - Compact Height Version */
+.core-servicesPage {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.core-servicesPage .container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #2c3e50;
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
 }
 
-.hero-btn {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s ease;
+/* Grid layout */
+.servicePage-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
-.primary-btn {
+/* Card styles */
+.servicePage-card {
+  display: flex;
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+}
+
+.servicePage-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Reverse layout */
+.servicePage-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Image side */
+.servicePage-img {
+  width: 45%;
+  max-height: 320px;
+  overflow: hidden;
+}
+
+.servicePage-img img {
+  width: 100%;
+  height: 100%;
+ object-fit:cover; 
+}
+
+/* Text side */
+.servicePage-content {
+  width: 55%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.servicePage-content h3 {
+  font-size: 1.5rem;
+  color:rgb(25, 25, 83);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.servicePage-content p {
+  color: #444;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.servicePage-content ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.servicePage-content ul li {
+  margin-bottom: 6px;
+}
+
+/* Buttons */
+.servicePage-btn,
+.service-btnPage {
   background-color: #ff6b6b;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.servicePage-btn:hover,
+.service-btnPage:hover {
+  background-color: #1a1a1a;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .servicePage-card,
+  .servicePage-card.reverse {
+    flex-direction: column;
+  }
+
+  .servicePage-img,
+  .servicePage-content {
+    width: 100%;
+  }
+
+  .servicePage-content {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .servicePage-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .servicePage-content p,
+  .servicePage-content ul {
+    font-size: 0.9rem;
+  }
+
+  .servicePage-btn,
+  .service-btnPage {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Health Section */
+.health-section {
+  background-color: #f0f8ff;
+  padding: 60px 20px;
+}
+
+.health-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.health-card {
+  background: #fff;
+  padding: 25px;
+  width: 300px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.health-icon {
+  font-size: 2rem;
+  color: #8b5a2b;
+  margin-bottom: 10px;
+}
+
+/* Consultation Section */
+.consultation-section {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+.consultation-content {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.consultation-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color:rgb(14, 14, 67);
+}
+
+.consultation-list {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.consultation-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: left;
+}
+
+.consult-icon {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-top: 6px;
+}
+.Consult-primary-btn{
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.Consult-primary-btn:hover {
+  background-color: rgb(13, 13, 54);
+  color:white;
+  transition: background-color 0.3s ease;
+}
+
+/* Testimonials */
+.testimonials-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.testimonial-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section-title {
+  font-size: 2.4rem;
+  color: rgb(14, 14, 75);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.testimonial-card {
+  background-color: #fff;
+  padding: 25px;
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-content p {
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.client-info h4 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.client-info span {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 60px 20px;
+  background-color: #2c3e50;
   color: white;
+  text-align: center;
 }
 
-.primary-btn:hover {
-  background-color: #e05757;
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-.secondary-btn {
-  background-color: white;
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.cta-buttons button {
+  margin: 0 10px;
+  padding: 12px 22px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.cta-buttons .primary-btn {
+  background-color: #f4d03f;
   color: #333;
 }
 
-.secondary-btn:hover {
-  background-color: #f1f1f1;
+.cta-buttons .secondary-btn {
+  background-color:#ff6b6b;
+  color: #fff;
+  
+}
+
+.cta-buttons button:hover {
+  opacity: 0.5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .service-card,
+  .service-card.reverse {
+    flex-direction: column;
+  }
+
+  .service-img,
+  .service-content {
+    width: 100%;
+  }
+
+  .value-cards,
+  .health-grid,
+  .testimonial-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
 }

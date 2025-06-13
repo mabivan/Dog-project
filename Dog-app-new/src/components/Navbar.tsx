@@ -1,33 +1,48 @@
 import { NavLink } from 'react-router-dom';
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaSignOutAlt } from 'react-icons/fa';
+import { signOut } from 'firebase/auth';
+import { auth } from '../firebase';
+import { useNavigate } from 'react-router-dom';
 
 interface NavbarProps {
   toggleSidebar: () => void;
 }
 
-const Nashartex = ({ toggleSidebar }: NavbarProps) => {
+const Navbar = ({ toggleSidebar }: NavbarProps) => {
+  const navigate = useNavigate();
   const links = [
     { to: "/breeds", text: "Breeds" },
     { to: "/about", text: "About" },
-    { to: "/services", text: "Services" },
+    { to: "/service", text: "Service" },
     { to: "/contact", text: "Contact" },
   ];
 
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      navigate('/login');
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
+  };
+
   return (
     <nav className="navbar">
-      <button className="menu-button" onClick={toggleSidebar}>
-        <FaBars />
-      </button> 
+      <div className="navbar-left">
+        <button className="menu-button" onClick={toggleSidebar}>
+          <FaBars />
+        </button>
 
-      <div className="brand-container">
-        <NavLink to="/#">
-          <img 
-            src="/Dog-logging" 
-            alt="Trinity Dogs Logo" 
-            className="logo"
-          />
-        </NavLink>
-        <span className="brand-name">Trinity Dogs</span>
+        <div className="brand-container">
+          <NavLink to="/">
+            <img 
+              src="/Dog-logging" 
+              alt="Trinity Dogs Logo" 
+              className="logo"
+            />
+          </NavLink>
+          <span className="brand-name">Trinity Dogs</span>
+        </div>
       </div>
 
       <div className="nav-links">
@@ -41,8 +56,15 @@ const Nashartex = ({ toggleSidebar }: NavbarProps) => {
           </NavLink>
         ))}
       </div>
+
+      <div className="navbar-right">
+        <button onClick={handleLogout} className="logout-button">
+          <FaSignOutAlt className="logout-icon" />
+          <span>Logout</span>
+        </button>
+      </div>
     </nav>
   );
 };
 
-export default Nashartex;
+export default Navbar;

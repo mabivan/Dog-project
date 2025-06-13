@@ -147,7 +147,7 @@
 }
 
 .cta-content {
-  width: 60%;
+  width: 120%;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -155,7 +155,7 @@
 }
 
 .cta-content h3 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
@@ -181,13 +181,19 @@
 }
 
 .cta-image-wrapper {
-  width: 100%;
+  width: 120%;
   height: 175%;
+  
 }
 
 .cta-image-wrapper img {
-  width: 105%;
+  width: 150%;
   height: 100%;
-  object-fit: cover;
-  display: block;
+  object-fit: contain;
+  image-orientation: from-image;
+  position: relative;
+  
+  
+
+ 
 }

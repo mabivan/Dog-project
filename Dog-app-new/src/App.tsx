@@ -1,62 +1,160 @@
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { auth } from './firebase';
+import { onAuthStateChanged } from 'firebase/auth';
 import Home from './pages/Home';
-
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import './App.css';
 import Footer from './components/Footer';
-import Breeds from './pages/Breeds'; // 👈 Make sure this path is correct
+import Breeds from './pages/Breeds';
 import About from './pages/About';
-import Services from './pages/Service'; 
-import Contact from './pages/Contact'// 👈 Make sure this path is correct
-import  Orders  from './pages/Orders'
+import Contact from './pages/Contact';
+import Orders from './pages/Orders';
 import Appointments from './pages/Appointments';
-import Help from './pages/Help'; // 👈 Make sure this path is correct
-// 👈 Make sure this path is correct
-// 👈 Make sure this path is correct
-// // 👈 Make sure this path is correct
+import Help from './pages/Help';
+import Settings from './pages/Settings';
+import Premium from './pages/Premium';
+import Service from './pages/Service';
+import Login from './pages/Login'
+import Signup from './pages/Signup'
 
-const Dashboard = () => {
-  return (
-    <div>
-      <h1>Dashboard</h1>
-      <p>Welcome to your dashboard!</p>
-    </div>
-  );
+const MainLayout = ({ children, isSidebarOpen, toggleSidebar }: { 
+  children: React.ReactNode,
+  isSidebarOpen: boolean,
+  toggleSidebar: () => void 
+}) => (
+  <div className="app">
+    <Navbar toggleSidebar={toggleSidebar} />
+    <Sidebar isOpen={isSidebarOpen} />
+    <main className={`main-content ${isSidebarOpen ? 'sidebar-open' : ''}`}>
+      {children}
+    </main>
+    <Footer />
+  </div>
+);
+
+const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
+  return auth.currentUser ? <>{children}</> : <Navigate to="/login" replace />;
 };
 
-
-// Keep existing components
-// (Removed duplicate Services and Contact components)
+const AuthRoute = ({ children }: { children: React.ReactNode }) => {
+  return !auth.currentUser ? <>{children}</> : <Navigate to="/" replace />;
+};
 
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, () => {
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  if (loading) {
+    return <div className="loading">Loading...</div>;
+  }
 
   return (
     <Router>
-      <div className="app">
-        <Navbar toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
-        <Sidebar isOpen={isSidebarOpen} />
+      <Routes>
+        {/* Public routes */}
+        <Route path="/login" element={
+          <AuthRoute>
+            <Login />
+          </AuthRoute>
+        } />
+        <Route path="/signup" element={
+          <AuthRoute>
+            <Signup />
+          </AuthRoute>
+        } />
+
+        {/* Protected routes */}
+        <Route path="/" element={
+          <ProtectedRoute>
+            <MainLayout isSidebarOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}>
+              <Home />
+            </MainLayout>
+          </ProtectedRoute>
+        } />
         
-        <main className={`main-content ${isSidebarOpen ? 'sidebar-open' : ''}`}>
-          <Routes>
-            <Route path="/breeds" element={<Breeds />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/Orders" element={<Orders />} /> 
-            <Route path="/Appointments" element={<Appointments />} />
-            <Route path="/Help" element={<Help />} /> {/* Assuming Contact is used for help */}
-            {/* Add more routes as needed */}
-            {/* Example: <Route path="/some-other-page" element={<SomeOtherPage />} /> */}
-            {/* Add more routes as needed */}
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+        <Route path="/breeds" element={
+          <ProtectedRoute>
+            <MainLayout isSidebarOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}>
+              <Breeds />
+            </MainLayout>
+          </ProtectedRoute>
+        } />
+        
+        <Route path="/about" element={
+          <ProtectedRoute>
+            <MainLayout isSidebarOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}>
+              <About />
+            </MainLayout>
+          </ProtectedRoute>
+        } />
+        
+        <Route path="/contact" element={
+          <ProtectedRoute>
+            <MainLayout isSidebarOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}>
+              <Contact />
+            </MainLayout>
+          </ProtectedRoute>
+        } />
+        
+        <Route path="/orders" element={
+          <ProtectedRoute>
+            <MainLayout isSidebarOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}>
+              <Orders />
+            </MainLayout>
+          </ProtectedRoute>
+        } />
+        
+        <Route path="/appointments" element={
+          <ProtectedRoute>
+            <MainLayout isSidebarOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}>
+              <Appointments />
+            </MainLayout>
+          </ProtectedRoute>
+        } />
+        
+        <Route path="/help" element={
+          <ProtectedRoute>
+            <MainLayout isSidebarOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}>
+              <Help />
+            </MainLayout>
+          </ProtectedRoute>
+        } />
+        
+        <Route path="/settings" element={
+          <ProtectedRoute>
+            <MainLayout isSidebarOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}>
+              <Settings />
+            </MainLayout>
+          </ProtectedRoute>
+        } />
+        
+        <Route path="/premium" element={
+          <ProtectedRoute>
+            <MainLayout isSidebarOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}>
+              <Premium />
+            </MainLayout>
+          </ProtectedRoute>
+        } />
+        
+        <Route path="/service" element={
+          <ProtectedRoute>
+            <MainLayout isSidebarOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}>
+              <Service />
+            </MainLayout>
+          </ProtectedRoute>
+        } />
+        
+        <Route path="*" element={<Navigate to="/login" replace />} />
+      </Routes>
     </Router>
   );
 };

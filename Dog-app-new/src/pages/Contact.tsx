@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
   <div className="dog-card-text">
     <h3>Welcome to our Contact Center</h3>
     <p>
- Our team is here to help you
+      Our team is here to help you
       find the perfect furry friend and make the process smooth and joyful!
     </p>
   </div>
@@ -101,6 +101,8 @@ const Contact: React.FC = () => {
       <span className="info-icon">📞</span> Phone: <a href="tel:+256-7467-35979">+256-7467-35979</a>
     </p>
   </div>
+{/* Contact Information Section End */}
+   <div className="iconsMedia-p">Follow Us</div>
     <div className="icons">
   <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
     <span className="icon facebook"><FaFacebookF /></span>

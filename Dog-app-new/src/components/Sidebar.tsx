@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { FaTh, FaSearch, FaCalendarAlt, FaBox, FaQuestionCircle, FaCog } from 'react-icons/fa';
+import { FaCrown, FaSearch, FaCalendarAlt, FaBox, FaQuestionCircle, FaCog } from 'react-icons/fa';
 import { useSearch } from './SearchContext';
 
 interface SidebarProps {
@@ -10,7 +10,7 @@ const Sidebar = ({ isOpen }: SidebarProps) => {
   const { searchTerm, setSearchTerm } = useSearch();
 
   const items = [
-    { to: "/dashboard", icon: <FaTh />, text: "Dashboard" },
+    { to: "/premium", icon: <FaCrown />, text: "Premium" },
     { to: "/breeds", icon: <FaSearch />, text: "Breeds" },
     { to: "/appointments", icon: <FaCalendarAlt />, text: "Appointments" },
     { to: "/orders", icon: <FaBox />, text: "Orders" },

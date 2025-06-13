@@ -8,7 +8,8 @@ const Footer: React.FC = () => {
       <div className="footer-top">
         <div className="footer-logo">
           <h2>Trinity Dogs</h2>
-          <p>Your trusted companion marketplace.</p>
+          <p>Your trusted Dog Selling Company.</p>
+          <p>Start Now !!!.</p>
         </div>
 
         <div className="footer-links">
