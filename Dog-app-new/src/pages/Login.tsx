@@ -16,9 +16,11 @@ const Login = () => {
     setLoading(true);
     setError('');
     try {
+      debugger
       await signInWithEmailAndPassword(auth, email, password);
       navigate('/');
     } catch (err) {
+      console.log("err", err)
       setError('Failed to login. Please check your credentials.');
       console.error(err);
     } finally {

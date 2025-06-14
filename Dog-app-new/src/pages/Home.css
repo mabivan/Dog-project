@@ -505,17 +505,16 @@ box-shadow:
 
 .cta-dogs-image {
   width: 140px;
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   border-radius: 12px;
   background: linear-gradient(to right, #1e2b45cc, #2e4a78cc);
   padding: 6px;
   transition: transform 0.3s ease;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-
 }
 
-/* Ladder layout using Y offsets */
+/* Y offsets */
 .image-one {
   transform: translateY(20px);
   z-index: 1;
@@ -533,13 +532,13 @@ box-shadow:
   z-index: 1;
 }
 
-/* Optional hover effect */
+
 .cta-dogs-image:hover {
   transform: scale(1.05);
   z-index: 5;
 }
 
-/* Responsive stack if needed */
+
 @media (max-width: 768px) {
   .cta-dogs-image-container {
     flex-direction: column;
