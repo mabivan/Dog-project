@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './orders.css';
-import dogImages from '../assets/images/dogDelievery.jpg'; // Adjust the path as needed
+import dogImages from '../assets/images/dogDelievery.jpg'; 
 
 
 const OrdersPage = () => {

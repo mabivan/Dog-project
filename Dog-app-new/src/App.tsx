@@ -58,8 +58,11 @@ const App = () => {
   }
 
   return (
+    
     <Router>
+      
       <Routes>
+        
         {/* Public routes */}
         <Route path="/login" element={
           <AuthRoute>
@@ -154,8 +157,11 @@ const App = () => {
         } />
         
         <Route path="*" element={<Navigate to="/login" replace />} />
+        
       </Routes>
+      
     </Router>
+    
   );
 };
 

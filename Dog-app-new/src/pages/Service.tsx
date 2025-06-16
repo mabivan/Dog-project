@@ -173,7 +173,7 @@ const Service: React.FC = () => {
                 <FaClipboardCheck className="consult-icon" />
                 <div>
                   <h4>Handler Training</h4>
-                  <p>Professional development for K9 handlers and trainers</p>
+                  <p>Professional development from our handlers and trainers</p>
                 </div>
               </div>
               <div className="consultation-item">

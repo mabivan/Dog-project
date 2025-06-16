@@ -11,8 +11,7 @@ import popularImage from '../assets/images/P.L.retrieval.jpeg';
 import popularImages from '../assets/images/P.G.retrieval.jpeg';
 import popularImagess from '../assets/images/P.Bull.jpeg';
 import popularImagesss from '../assets/images/P.Shephard.jpeg';
-// Adjust path as needed
-// Adjust path as needed
+
 import { Link } from "react-router-dom";
 import { FaDog, FaCrown, FaTruck, FaHeadset, FaMapMarkerAlt, FaBookOpen } from 'react-icons/fa';
 
@@ -21,7 +20,7 @@ import { FaDog, FaCrown, FaTruck, FaHeadset, FaMapMarkerAlt, FaBookOpen } from '
 const Home = () => {
   return (
     <div className="Home-page">
-      {/* 🐾 Hero Section */}
+      {/* Hero Section */}
       <section
         className="hero-section"
         style={{ backgroundImage: `url(${Trials})` }}
@@ -83,7 +82,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 🐾 About Section */}
+      {/* About Section */}
       <section className="about-section">
         <div className="about-content">
           <h2 className="about-title">About Trinity Dogs</h2>

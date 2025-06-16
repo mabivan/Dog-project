@@ -17,9 +17,9 @@ html, body {
 }
 
 
-/* 🐾 Full-Width Hero Section */
+/* Hero Section */
 .hero-section {
-  width: 100vw; /* Full viewport width */
+  width: 100vw; 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -232,8 +232,8 @@ html, body {
     line-height: 1.5;
 }
 
-/* 🐾 Services Section */
-/* 🐾 Services Section */
+/* Services Section */
+
 .services-section {
   padding: 4rem 2rem;
   background-color: #f7f7f7;
@@ -338,7 +338,7 @@ html, body {
 /* 🐾Our team Section */
 .team-section {
   width: 100%;
-  background-color: #1e2b45e1; /* light navy blue */
+  background-color: #1e2b45e1; 
   color: #ffffff;
   padding: 80px 5%;
   box-sizing: border-box;
@@ -427,7 +427,7 @@ html, body {
 .cta-dogs-section {
   background: linear-gradient(135deg, #fafcfe26, #193564);
   border-radius: 18px;
-  padding: 30px 30px; /* Reduced height */
+  padding: 30px 30px; 
   margin: 40px 20px;
   color: black;
   overflow: hidden;

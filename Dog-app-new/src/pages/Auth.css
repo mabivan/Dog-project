@@ -32,12 +32,12 @@
   font-size: 1.3rem;
   animation-name: colorChange;
   animation-duration: 2s;
-  animation-iteration-count: infinite; /* Makes the animation loop */
-  animation-timing-function: linear; /* Smooth color transitions */
+  animation-iteration-count: infinite; 
+  animation-timing-function: linear; 
 }
 
-@keyframes colorChange { /* Fixed the keyframe name to match animation-name */
-  0% { color: rgb(76, 76, 237); } /* Changed background-color to color */
+@keyframes colorChange { 
+  0% { color: rgb(76, 76, 237); } 
   50% { color: rgb(76, 237, 76); }
   75% { color: rgb(237, 76, 237); }
   100% { color:  rgb(76, 237, 76); }
