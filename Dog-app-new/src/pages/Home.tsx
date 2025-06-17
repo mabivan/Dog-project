@@ -112,7 +112,7 @@ const Home = () => {
             <FaDog className="service-icon" />
             <h3 className="service-name">Core Services</h3>
             <p className="service-description">
-              Healthy puppies, regular vet checks, and ethical dog breeding.
+              Healthy Dogs,vet checks, and ethical dog breeding.
             </p>
             <Link to="#" className="service-btn">Explore</Link>
           </div>
