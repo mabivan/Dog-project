@@ -29,20 +29,33 @@ const Breeds: React.FC = () => {
       .then((res) => res.json())
       .then((data: Breed[]) => {
         const withPrices: BreedWithPrice[] = data
-          .filter((breed) => breed.image?.url || breed.reference_image_id) // Filter out breeds with no image
+          .filter((breed) => breed.image?.url || breed.reference_image_id)  
           .map((breed) => ({
             ...breed,
-            price: Math.floor(Math.random() * 2000 + 500), // $500–$2500
+            price: Math.floor(Math.random() * 2000 + 500), 
           }));
         setBreeds(withPrices);
       })
       .catch((err) => console.error('Error fetching breeds:', err));
   }, [apiKey]);
 
-  const filteredBreeds = breeds.filter((breed) =>
-    breed.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  
 
+// filtering by  name, breeds and temparament in the searchTerm
+  
+const filteredBreeds = breeds.filter(breed => {
+  const search = searchTerm.toLowerCase();
+
+  const nameMatch = breed.name.toLowerCase().includes(search);
+  const temperamentMatch = breed.temperament
+    ? breed.temperament.toLowerCase().includes(search)
+    : false;
+  const lifeSpanMatch = breed.life_span
+    ? breed.life_span.toLowerCase().includes(search)
+    : false;
+  
+  return nameMatch || temperamentMatch || lifeSpanMatch ;
+});
   return (
     <div className="breeds-page">
       <h2>All Dog Breeds</h2>
@@ -51,7 +64,7 @@ const Breeds: React.FC = () => {
           const imageUrl =
             breed.image?.url ||
             (breed.reference_image_id
-              ? `https://cdn2.thedogapi.com/images/${breed.reference_image_id}.jpg`
+               ? `https://cdn2.thedogapi.com/images/${breed.reference_image_id}.jpg`
               : null);
 
           return (

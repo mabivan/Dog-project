@@ -19,12 +19,12 @@ const Login = () => {
       debugger
       await signInWithEmailAndPassword(auth, email, password);
       navigate('/');
-    } catch (err) {
-      console.log("err", err)
-      setError('Failed to login. Please check your credentials.');
-      console.error(err);
+    } catch (err:any) {
+      console.log("err", err.message)
+      setError('Failed to login. Please check your email or password and try again.');
+      console.error(err.message);
     } finally {
-      setLoading(false);
+      setLoading(false); 
     }
   };
 
