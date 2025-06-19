@@ -25,7 +25,7 @@ const Sidebar = ({ isOpen }: SidebarProps) => {
           <FaSearch className="search-icon" />
           <input
             type="text"
-            placeholder="Search breeds or dogs..."
+            placeholder="Search breeds"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
