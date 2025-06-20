@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Auth.css';
 
 const Login = () => {
@@ -15,8 +15,7 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     setError('');
-    try {
-      debugger
+    try { 
       await signInWithEmailAndPassword(auth, email, password);
       navigate('/');
     } catch (err:any) {
@@ -35,6 +34,7 @@ const Login = () => {
         <h2>Login To Get Access</h2>
         {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleLogin}>
+            {/*Email*/}
           <div className="form-group">
             <label>Email</label>
             <input
@@ -45,6 +45,7 @@ const Login = () => {
               placeholder="Enter your email"
             />
           </div>
+          {/*password*/}
           <div className="form-group">
             <label>Password</label>
             <input
@@ -55,12 +56,15 @@ const Login = () => {
               placeholder="Enter your password"
             />
           </div>
+
+          {/*Button*/}
           <button type="submit" className="auth-button" disabled={loading}>
             {loading ? 'Logging in...' : 'Login'}
           </button>
         </form>
+        {/*paragraph*/}
         <p className="auth-link">
-          Don't have an account? <a href="/signup">Register</a>
+          Don't have an account? <Link to ="/signup">Register</Link>
         </p>
       </div>
     </div>
