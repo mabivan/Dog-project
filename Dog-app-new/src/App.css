@@ -82,7 +82,7 @@
 }
 
 .nav-link.active {
-  color: #ff6b6b;
+  color: rgb(252, 242, 242);
 }
 
 .nav-link.active::after {

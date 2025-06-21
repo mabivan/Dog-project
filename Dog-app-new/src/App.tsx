@@ -18,7 +18,7 @@ import Premium from './pages/Premium';
 import Service from './pages/Service';
 import Login from './pages/Login'
 import Signup from './pages/Signup'
-
+/*wrapper*/
 const MainLayout = ({ children, isSidebarOpen, toggleSidebar }: { 
   children: React.ReactNode,
   isSidebarOpen: boolean,
@@ -50,7 +50,7 @@ const App = () => {
     const unsubscribe = onAuthStateChanged(auth, () => {
       setLoading(false);
     });
-    return () => unsubscribe();
+    return () => unsubscribe(); 
   }, []);
 
   if (loading) {
@@ -63,7 +63,7 @@ const App = () => {
       
       <Routes>
         
-        {/* Public routes */}
+        {/* Redirector aw */}
         <Route path="/login" element={
           <AuthRoute>
             <Login />
