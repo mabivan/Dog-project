@@ -60,10 +60,12 @@
 }
 
 .sub-heading {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
-  color: #2c3e50;
+  color: #113151;
   text-align: center;
+  padding-top: 50px;
+  padding-bottom: 15px;
 }
 
 .card-row {
@@ -95,6 +97,8 @@
   margin: 3rem auto;
   max-width: 1200px;
   padding: 0 1.5rem;
+  margin-bottom: 60px;
+  margin-top: 60px;
 }
 
 .mission-card,
@@ -144,6 +148,7 @@
   border-radius: 8px;
   overflow: hidden;
   color: white;
+  padding-top: 30px;
 }
 
 .cta-content {
@@ -157,11 +162,14 @@
 .cta-content h3 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color:whitesmoke;
+
 }
 
 .cta-content p {
   margin-bottom: 2rem;
   line-height: 1.5;
+  margin-left:20px;
 }
 
 .cta-button {
@@ -174,6 +182,7 @@
   font-size: 1rem;
   align-self: flex-start;
   transition: background-color 0.3s;
+   margin-left:20px;
 }
 
 .cta-button:hover {

@@ -41,12 +41,14 @@
   font-size: 20px;
   line-height: 1.4;
   margin: 0;
+  margin-left:20px;
 }
 
 .dog-card-img {
   width: 110px; 
   height: auto;
   object-fit: contain;
+  padding-top: 15px;
 }
 
 .watsap{
@@ -62,7 +64,7 @@
   font-size: 35px;
   text-transform: lowercase;
   margin-bottom: 20px;
-color: #0c182f;
+color: rgb(24, 24, 113);
 }
 
 .contact-left p {
