@@ -25,46 +25,46 @@ const Navbar = ({ toggleSidebar }: NavbarProps) => {
       console.error('Error signing out:', error);
     }
   };
+return (
+<nav className="navbar">
+  <div className="navbar-left">
+    <button className="menu-button" onClick={toggleSidebar}>
+      <FaBars />
+    </button>
+  </div>
 
-  return (
-    <nav className="navbar">
-      <div className="navbar-left">
-        <button className="menu-button" onClick={toggleSidebar}>
-          <FaBars />
-        </button>
+  <div className="navbar-content">
+    <div className="brand-container">
+      <NavLink to="/">
+        <img 
+          src="/Dog-logging" 
+          alt="Trinity Dogs Logo" 
+          className="logo"
+        />
+      </NavLink>
+      <span className="brand-name">Trinity Dogs</span>
+    </div>
 
-        <div className="brand-container">
-          <NavLink to="/">
-            <img 
-              src="/Dog-logging" 
-              alt="Trinity Dogs Logo" 
-              className="logo"
-            />
-          </NavLink>
-          <span className="brand-name">Trinity Dogs</span>
-        </div>
-      </div>
+    <div className="nav-links">
+      {links.map((link) => (
+        <NavLink
+          key={link.to}
+          to={link.to}
+          className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
+        >
+          {link.text}
+        </NavLink>
+      ))}
+    </div>
+  </div>
 
-      <div className="nav-links">
-        {links.map((link) => (
-          <NavLink
-            key={link.to}
-            to={link.to}
-            className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
-          >
-            {link.text}
-          </NavLink>
-        ))}
-      </div>
-
-      <div className="navbar-right">
-        <button onClick={handleLogout} className="logout-button">
-          <FaSignOutAlt className="logout-icon" />
-          <span>Logout</span>
-        </button>
-      </div>
-    </nav>
-  );
-};
+  <div className="navbar-right">
+    <button onClick={handleLogout} className="logout-button">
+      <FaSignOutAlt className="logout-icon" />
+      <span>Logout</span>
+    </button>
+  </div>
+</nav>
+)}
 
 export default Navbar;

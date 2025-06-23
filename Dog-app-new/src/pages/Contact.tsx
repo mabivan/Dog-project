@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
-import dogs from '../assets/images/Cta image(2).jpeg'; // Adjust the path as needed
+import dogs from '../assets/images/Cta image(2).jpeg';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 

@@ -89,7 +89,7 @@ const Appointments: React.FC = () => {
     return (
       <div className="confirmation-container">
         <h2>APPOINTMENT ACCEPTED</h2>
-        <p>Your appointment has been successfully scheduled!</p>
+        <p className='h2p'>Your appointment has been successfully scheduled !!!</p>
         <div className="confirmation-details">
           <h3>Details:</h3>
           <p><strong>Dog Name:</strong> {dogDetails.name}</p>
@@ -216,11 +216,11 @@ const Appointments: React.FC = () => {
 
         <section className="confirmation-section">
           <h3>Review Your Appointment</h3>
-          <p><strong>Dog's Name:</strong> {dogDetails.name}</p>
-          <p><strong>Service:</strong> {preferences.service}</p>
-          <p><strong>Date:</strong> {preferences.date || 'Not selected'}</p>
-          <p><strong>Time:</strong> {preferences.time || 'Not selected'}</p>
-          <p><strong>Special Requests:</strong> {questions || 'None'}</p>
+          <p className="P2"><strong>Dog's Name:</strong> {dogDetails.name}</p>
+          <p className="P2"><strong>Service:</strong> {preferences.service}</p>
+          <p className="P2"><strong>Date:</strong> {preferences.date || 'Not selected'}</p>
+          <p className="P2"><strong>Time:</strong> {preferences.time || 'Not selected'}</p>
+          <p className="P2"><strong>Special Requests:</strong> {questions || 'None'}</p>
         </section>
 
 

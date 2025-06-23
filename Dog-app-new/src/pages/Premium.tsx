@@ -346,8 +346,8 @@ const Premium: React.FC = () => {
           </div>
           <h1>Unlock the Full Potential</h1>
           <p className="subtitle">
-            Upgrade to Premium and get access to exclusive features, priority support, 
-            and enhanced capabilities to supercharge your workflow.
+            Upgrade to Premium and get access to exclusive Dog services, priority support, 
+            and enhanced capabilities to get a life Partner.
           </p>
           <div className="cta-buttons">
             <button 

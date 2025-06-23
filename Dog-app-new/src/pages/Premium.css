@@ -176,6 +176,9 @@
   padding: 3rem 1rem;
   text-align: center;
 }
+.pricing-section h2{
+  font-size: 1.9rem;
+}
 
 .billing-toggle {
   display: flex;
@@ -366,6 +369,9 @@ input:checked + .slider.round::before {
 .testimonials-section {
   padding: 3rem 1rem;
   text-align: center;
+}
+.testimonials-section {
+font-size: 1.2rem;
 }
 
 .testimonials-grid {
