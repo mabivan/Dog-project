@@ -17,7 +17,7 @@ import Settings from './pages/Settings';
 import Premium from './pages/Premium';
 import Service from './pages/Service';
 import Login from './pages/Login'
-import Signup from './pages/Signup'
+import Signup from './pages/Signup' 
 /*wrapper*/
 const MainLayout = ({ children, isSidebarOpen, toggleSidebar }: { 
   children: React.ReactNode,
@@ -63,7 +63,7 @@ const App = () => {
       
       <Routes>
         
-        {/* Redirector aw */}
+        {/* Redirector auth */}
         <Route path="/login" element={
           <AuthRoute>
             <Login />
