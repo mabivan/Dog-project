@@ -197,8 +197,8 @@ const fetchTestimonials = async (): Promise<Testimonial[]> => {
     {
       id: '3',
       name: 'Isaac Mugabi',
-      role: 'Freelance Designer',
-      content: 'I was hesitant at first, but the premium features have helped me land bigger clients and manage my workflow better.',
+      role: 'CEO Odyssey',
+      content: 'I was hesitant at first, but the premium features have helped me handel my Dog better and with ease.',
       rating: 4
     }
   ];
@@ -311,7 +311,7 @@ const Premium: React.FC = () => {
     // Simulate checkout process
     if (selectedPlan) {
       alert(`Proceeding to checkout with ${selectedPlan} plan`);
-      // In a real app, redirect to checkout page or show checkout modal
+      
     }
   };
 
