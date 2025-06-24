@@ -109,15 +109,15 @@ const OrdersPage = () => {
       <img src={dogImages} alt="Dog" />
     </div>
     <div className="product-details">
-      <h2>Stunning Trinity Dog</h2>
+      <h2>Stunning Trinity Dogs</h2>
       <p className="product-description">
-        Adorable 8-week old Bull Dog from Trinity breeders. Vaccinated, microchipped, and ready for a loving home.
+        Adorable and well trained, Dogs from Trinity breeders. Vaccinated, microchipped, and ready for a loving home.
       </p>
 
       <div className="product-features">
         <h3>Features:</h3>
         <ul>
-          <li>Age: 8 weeks</li>
+          <li>Well Trained</li>
           <li>Vaccinations up to date</li>
           <li>Health guarantee</li>
           <li>Pedigree papers included</li>

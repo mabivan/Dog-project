@@ -444,14 +444,14 @@ body {
 }
 
 .shipping {
-  color: green;
-}
-.shipping:hover {
   background-color: #ff6b6b;
   padding: 5px 10px;
   border-radius: 5px;
   color:white;
   transition: background-color 0.3s ease;
+}
+.shipping:hover {
+background-color: #6e3737;
 }
 
 /*  Shipping Info Styling */
@@ -521,7 +521,7 @@ body {
 
 .benefit-icon {
   font-size: 20px;
-  color: green;
+  color:white;
   margin-right: 8px;
 }
 

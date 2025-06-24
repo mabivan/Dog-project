@@ -142,7 +142,7 @@ const fetchFeatures = async (): Promise<Feature[]> => {
     {
       id: 'security',
       title: 'Enhanced Security',
-      description: 'Bank-grade encryption to keep your data safe and secure at all times.',
+      description: 'Acoounts encryption to keep your data safe and secure at all times.',
       icon: <FaShieldAlt className="feature-icon" />
     },
     {
