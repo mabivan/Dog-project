@@ -110,7 +110,7 @@ const App = () => {
         
         <Route path="/orders" element={
           <ProtectedRoute>
-            <MainLayout isSidebarOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}>
+             <MainLayout isSidebarOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}>
               <Orders />
             </MainLayout>
           </ProtectedRoute>
