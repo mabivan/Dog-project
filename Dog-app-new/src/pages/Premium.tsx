@@ -323,15 +323,17 @@ const Premium: React.FC = () => {
 
   if (error) {
     return (
-      <div className="premium-container error-container">
-        <div className="error-message">
-          <h2>Something went wrong</h2>
-          <p>{error}</p>
-          <button onClick={() => window.location.reload()} className="retry-button">
-            Retry
-          </button> 
+      <>
+        <div className="premium-container error-container">
+          <div className="error-message">
+            <h2>Something went wrong</h2>
+            <p>{error}</p>
+            <button onClick={() => window.location.reload()} className="retry-button">
+              Retry
+            </button> 
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 
