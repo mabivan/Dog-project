@@ -329,7 +329,7 @@ const Premium: React.FC = () => {
           <p>{error}</p>
           <button onClick={() => window.location.reload()} className="retry-button">
             Retry
-          </button>
+          </button> 
         </div>
       </div>
     );
