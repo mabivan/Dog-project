@@ -13,6 +13,7 @@ type Breed = {
   reference_image_id?: string;
 };
 
+
 type BreedWithPrice = Breed & { price: number };
 
 const Breeds: React.FC = () => {
