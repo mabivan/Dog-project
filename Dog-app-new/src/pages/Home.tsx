@@ -117,6 +117,9 @@ const Home = () => {
             <Link to="#" className="service-btn">Explore</Link>
           </div>
 
+
+          
+
           {/* Premium Services */}
           <div className="service-card">
             <FaCrown className="service-icon" />
@@ -166,8 +169,11 @@ const Home = () => {
             </p>
             <Link to="/help" className="service-btn"> Learn</Link>
           </div>
+        </div>
+      </section>
 
-          {/*our team section*/}
+
+        {/*our team section*/}
           <section className="team-section">
             <div className="team-container">
               <div className="team-image-container">
@@ -186,9 +192,6 @@ const Home = () => {
               </div>
             </div>
           </section>
-
-        </div>
-      </section>
       {/*call to action section*/}
       <section className="cta-dogs-section">
         <div className="cta-dogs-container">

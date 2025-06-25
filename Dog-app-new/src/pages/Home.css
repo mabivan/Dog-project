@@ -154,6 +154,7 @@ html, body {
 .p2{
     font-size: 1.2rem;
 }
+/* // About Section// */
 .about-section {
   display: flex;
   align-items: center;
@@ -162,6 +163,11 @@ html, body {
   background-color: #fdfdfd;
   gap: 2rem;
   flex-wrap: wrap;
+  /* // */
+  flex-direction: column;
+    align-items: center;
+    text-align: center;
+
 }
 
 .about-content {
@@ -216,6 +222,9 @@ html, body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
+    /* // */
+    order: -1;  
+    margin-bottom: 1rem;
 }
 
 .about-image {
@@ -551,5 +560,200 @@ box-shadow:
   .image-three {
     transform: translateY(0);
   }
+  .cta-dogs-image {
+    width: 100%;
+    max-width: 200px;
+  }
+  .cta-dogs-content {
+    text-align: center;
+  }
+  .cta-dogs-button {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .cta-dogs-content p {
+    padding-bottom: 0;
+  }
+  .cta-dogs-content {
+    padding-bottom: 0;
+  }
+  .cta-dogs-content h2 {
+    font-size: 1.8rem;
+  }
+  .cta-dogs-content p {
+    font-size: 1rem;
+  }
+  .cta-dogs-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  .cta-dogs-image {
+    width: 100%;
+    max-width: 300px;
+  }
+  .cta-dogs-image-container {
+    padding-top: 0;
+  }
+  .cta-dogs-image:nth-child(3) {
+    transform: translateY(0);
+    z-index: 1;
+  }
+  .cta-dogs-image:nth-child(2) {
+    transform: translateY(0);
+    z-index: 2;
+  }
+  .cta-dogs-image:nth-child(1) {
+    transform: translateY(0);
+    z-index: 3;
+  }
+  .about-image-container {
+    max-width: 100%;
+    padding: 0;
+  }
+  .about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  .about-content {
+    text-align: center;
+  }
+  .about-title {
+    font-size: 1.8rem;
+  }
+  .about-text {
+    font-size: 1rem;
+  }
+  .about-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .popular-breeds-section {
+  padding: 2rem;
 }
 
+.popular-breeds-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.popular-breeds-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Breed card */
+.breed-card {
+  flex: 0 0 auto;
+  width: 200px;
+  text-align: center;
+}
+
+.breed-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.breed-name {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Popular breeds */
+
+  .popular-breeds-container {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .breed-card {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    min-width: 70%;
+    max-width: 80%;
+  }
+
+  .breed-image {
+    height: 180px;
+  }
+  /* about us*/
+
+}
+@media (max-width: 768px) {
+  .services-grid {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-left: 1rem;
+  }
+
+  .service-card {
+    flex: 0 0 auto;
+    min-width: 75%;
+    max-width: 80%;
+    scroll-snap-align: start;
+  }
+}
+@media (max-width: 768px) {
+  .popular-breeds-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding: 1rem;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .popular-breeds-container::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  .breed-card {
+    flex: 0 0 75%;
+    scroll-snap-align: start;
+    min-width: 220px;
+    max-width: 80%;
+  }
+
+  .breed-image {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .breed-name {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+}

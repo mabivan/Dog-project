@@ -4,6 +4,7 @@
   max-width: 100vw;
   margin: auto;
   cursor: pointer;
+  margin-top: 100px;
 }
 
 .intro-card {
@@ -205,4 +206,33 @@
   
 
  
+}
+@media (max-width: 768px) {
+  .intro-card {
+    flex-direction: column; /* Stack vertically */
+    max-height: none; /* Allow it to grow */
+  }
+
+  .intro-text {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .intro-text h1 {
+    font-size: 2rem;
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+  }
+
+  .intro-image-wrapper {
+    height: 250px; /* Set a fixed height for mobile */
+  }
+
+  .intro-image-wrapper img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
 }
